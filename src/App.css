@@ -1,8 +1,3 @@
-@import "tailwindcss";
-@plugin "daisyui" {
-  themes: none;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -41,7 +36,7 @@ nav .navbar-brand {
 }
 
 #logo-img {
-  width: 28vw;
+  width: 25vw;
   margin: 0 14vw;
   transform: rotate(-30deg);
 }
@@ -98,7 +93,7 @@ nav .navbar-brand {
   }
 
   #logo-img {
-    width: 70vw;
+    width: 60vw;
     margin: 0 0 0 9vw;
     position: absolute;
     bottom: 15vw;
