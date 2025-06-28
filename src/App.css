@@ -1,42 +1,370 @@
-#root {
-  max-width: 1280px;
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+}
+nav li a {
+  color: black !important;
+}
+nav .navbar-brand {
+  font-weight: 500;
+}
+.fixed-top {
+  top: 20px !important;
+}
+
+/**** Hero section Animationn ***/
+.ani {
+  box-shadow: -8px -8px 7px 8px #e6e6e6;
+  padding-bottom: 50px;
+}
+#animation-container {
+  height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  position: relative;
+  overflow-x: hidden;
+  white-space: nowrap;
+  font-size: 3vw;
+  line-height: 8vw;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#logo-img {
+  width: 28vw;
+  margin: 0 14vw;
+  transform: rotate(-30deg);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.text.assist {
+  display: inline-block;
+  opacity: 50%;
+}
+
+.para-1,
+.para-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1vw;
+  width: auto;
+}
+
+.para-2 {
+  transform: translate(120vw);
+}
+
+#text-container-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+  #animation-container {
+    font-size: 3.5vw;
   }
+}
+
+@media screen and (max-width: 800px) {
+  #text-container {
+    display: none;
+  }
+
+  #animation-container {
+    font-size: 16vw;
+    display: block;
+  }
+
+  #text-container-mobile {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+    text-align: center;
+  }
+
+  #text-container-mobile .line {
+    margin-left: 100vw;
+  }
+
+  #logo-img {
+    width: 70vw;
+    margin: 0 0 0 9vw;
+    position: absolute;
+    bottom: 15vw;
+  }
+}
+
+/****** scroll down Animation ***/
+
+.mouse {
+  margin: auto;
+  width: 40px;
+  height: 65px;
+  border: 3px solid #333;
+  border-radius: 60px;
+  position: relative;
+}
+.mouse::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+  -webkit-animation: wheel 2s infinite;
+}
+@keyframes wheel {
   to {
-    transform: rotate(360deg);
+    opacity: 0;
+    top: 60px;
+  }
+}
+@-webkit-keyframes wheel {
+  to {
+    opacity: 0;
+    top: 50px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/** Snapping***/
+
+.snapping {
+  border-bottom: 1px solid white;
+
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+}
+
+/** Line 1 Animation***/
+
+@keyframes tipsy {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
   }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+
+/**  
+.line1 {
+  color: #000000;
+  
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -3px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-130%);
+}
+*/
+
+.line1:before,
+.line1:after {
+  content: "";
+  padding: 0.8rem;
+  position: absolute;
+  left: -10%;
+  width: 30px;
+  top: 50%;
+  display: block;
+  border: 3px solid rgb(0, 0, 0);
+  transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  animation: 5s infinite alternate ease-in-out tipsy;
+}
+
+.line1:before {
+  border-color: #000000 #000000 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  z-index: -1;
+}
+
+.line1:after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #000000 #000000;
+}
+
+/** Finger ***/
+
+.finger {
+  position: fixed;
+  bottom: 25px;
+  left: 50px;
+}
+.finger img {
+  width: 35px;
+}
+
+/*** Project Section*****/
+
+h2 {
+  font-size: 32px;
+  padding: 30px 0;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5vw;
+  box-sizing: border-box;
+}
+
+.section__cards {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.section__card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+}
+.section__card h4 {
+  margin: 20px 0;
 }
 
 .card {
-  padding: 2em;
+  border: none;
 }
 
-.read-the-docs {
-  color: #888;
+.card .work_img {
+  box-shadow: 2px 10px 10px 6px rgb(214, 214, 214);
+  border-radius: 0 !important;
 }
+
+.card .pcl {
+  position: absolute;
+  width: 125px;
+  height: 50px;
+  rotate: -230deg;
+  top: -8px;
+  left: -20px;
+}
+.card .pcr {
+  position: absolute;
+  width: 125px;
+  height: 50px;
+  rotate: -310deg;
+  top: -8px;
+  right: -20px;
+}
+.card img {
+  width: 250px;
+  height: 350px;
+}
+
+.card:not(:last-child) {
+  margin-right: 20px;
+}
+
+.card .work_img:hover {
+  box-shadow: 2px 10px 10px 6px rgb(148, 148, 148);
+}
+
+.card .card-title {
+  font-size: 20px;
+}
+
+.card .card-content {
+  margin: 20px 0;
+  max-width: 85%;
+}
+
+.card .card-link-wrapper {
+  margin-top: auto;
+}
+
+.card .card-link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: black;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.card:hover .card-link {
+  background: white;
+  color: black;
+}
+
+.cards::-webkit-scrollbar {
+  height: 12px;
+}
+
+.cards::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+  background: var(--darkred);
+}
+
+.cards::-webkit-scrollbar-track {
+  background: var(--thumb);
+}
+
+@media (min-width: 500px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .card {
+    flex-basis: calc(calc(100% / 3) - 20px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 70px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .card {
+    flex-basis: calc(35% - 30px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 100px;
+  }
+}
+
+.slideUp {
+  background: red;
+}
+
+/***About Page**/
