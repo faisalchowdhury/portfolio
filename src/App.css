@@ -367,12 +367,12 @@ h2 {
   background: red;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .card .pcr {
-    right: -20px;
+    right: -10px;
   }
   .card .pcl {
-    left: -20px;
+    left: -10px;
   }
 }
 @media only screen and (max-width: 1200px) {

@@ -38,7 +38,7 @@ const ProjectDetails = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-2 gap-5 items-center my-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center my-10">
             <div className="space-y-5">
               <a
                 className="btn p-5 bg-black hover:bg-gray-700 text-white"

@@ -57,7 +57,7 @@ const Work = () => {
                 <p>Technologies : {project.technologies}</p>
                 <Link
                   to={`/project-details/${project.id}`}
-                  className="btn border-none shadow rounded hover:bg-black hover:text-white">
+                  className="btn border-none shadow rounded bg-black  hover:bg-slate-100 hover:text-black text-white">
                   View Project <FaArrowRight></FaArrowRight>
                 </Link>
               </div>
