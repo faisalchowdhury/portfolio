@@ -5,6 +5,7 @@ import p3 from "./../../assets/p3.png";
 import p4 from "./../../assets/p4.png";
 import pc from "./../../assets/pc.png";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router";
 const ProjectCard = () => {
   const projects = [
     {
@@ -57,9 +58,11 @@ const ProjectCard = () => {
                   <div className="space-y-3 mt-5 w-[300px] mx-auto">
                     <p className="text-xl">{project.title}</p>
                     <p>Technologies : {project.technologies}</p>
-                    <button className="btn border-none shadow rounded hover:bg-black hover:text-white">
+                    <Link
+                      to={`/project-details/${project.id}`}
+                      className="btn border-none shadow rounded hover:bg-black hover:text-white">
                       View Project <FaArrowRight></FaArrowRight>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               ))}

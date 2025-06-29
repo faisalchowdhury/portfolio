@@ -11,7 +11,7 @@ const Header = () => {
       <li>
         <Link to={"/about"}>About</Link>
       </li>
-      <li>
+      <li onClick={() => window.open("/Faisal_s_cv.pdf", "_blank")}>
         <Link>Resume</Link>
       </li>
     </>

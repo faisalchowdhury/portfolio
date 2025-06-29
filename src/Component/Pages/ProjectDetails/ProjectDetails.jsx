@@ -42,7 +42,7 @@ const ProjectDetails = () => {
             <div className="space-y-5">
               <a
                 className="btn p-5 bg-black hover:bg-gray-700 text-white"
-                href=""
+                href={projectsDetails.github}
                 target="_blank">
                 <FaGithub size={26}></FaGithub> View Codebase on GitHub
               </a>
