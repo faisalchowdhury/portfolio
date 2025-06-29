@@ -5,6 +5,7 @@ import "./index.css";
 import Home from "./Home.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import About from "./Component/Pages/About/About.jsx";
+import ProjectDetails from "./Component/Pages/ProjectDetails/ProjectDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,11 @@ const router = createBrowserRouter([
   {
     path: "/about",
     Component: About,
+  },
+  {
+    path: "project-details/:id",
+    Component: ProjectDetails,
+    loader: () => fetch("/data/data.json"),
   },
 ]);
 

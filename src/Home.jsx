@@ -4,26 +4,15 @@ import "./App.css";
 import fLogo from "./assets/fLogo.png";
 import finger from "./assets/finger.png";
 import logo from "./assets/logo.png";
-import p1 from "./assets/p1.png";
-import p2 from "./assets/p2.png";
-import p3 from "./assets/p3.png";
-import p4 from "./assets/p4.png";
-import pc from "./assets/pc.png";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Header from "./Component/Header";
+import ProjectCard from "./Component/ProjectCard/ProjectCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-  const projects = [
-    { title: "App Store (React JS)", imgSrc: p1 },
-    { title: "E-commerce (MERN Stack)", imgSrc: p2 },
-    { title: "Community (MERN Stact)", imgSrc: p3 },
-    { title: "Health Care (Core PHP)", imgSrc: p4 },
-  ];
-
   useEffect(() => {
     const mm = gsap.matchMedia();
 
@@ -204,35 +193,7 @@ const Home = () => {
       </div>
       {/* Hero Section */}
 
-      {/* Projects */}
-      <div id="work" style={{ height: "" }} className="project_area snapping">
-        <div className="container">
-          <section className="section horizontal ">
-            <h2 id="myImg" className="absolute top-10 left-0 right-0 ">
-              Projects
-            </h2>
-            <div className="section__cards">
-              {projects.map((project, idx) => (
-                <div key={idx} className="card section__card">
-                  <img className="pcl" src={pc} alt="PC Left" />
-                  <img className="pcr" src={pc} alt="PC Right" />
-                  <div>
-                    <img
-                      className="work_img"
-                      src={project.imgSrc}
-                      alt={project.title}
-                    />
-                  </div>
-                  <div>
-                    <h4>{project.title}</h4>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        </div>
-      </div>
-      {/* Projects */}
+      <ProjectCard></ProjectCard>
     </div>
   );
 };

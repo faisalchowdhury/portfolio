@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "App Nest",
+    "technologies": "React, Tailwind, Express, MongoDb",
+    "image_path": "p1",
+    "description": "App Nest is a full-stack project that replicates a mini app marketplace, allowing users to install and rate apps seamlessly. Built with ReactJS, Tailwind CSS, ExpressJS, and MongoDB, it showcases smooth user experiences, intuitive UI, and organized data flow.For authentication, I integrated Firebase Auth to handle secure user sign-up, login, and app installation tracking. Users can rate apps after installation, ensuring that only verified users can leave feedback, maintaining rating integrity.On the backend, I used ExpressJS to build clean, scalable API endpoints, managing app listings, installations, and user ratings efficiently. ",
+    "challenges": [
+      "Structuring the rating system to ensure users can only rate apps they installed required careful planning of backend validation and frontend conditional rendering.",
+      "Ensuring a smooth, responsive UI with Tailwind while dynamically rendering user-installed apps and ratings without performance drops on lower-end devices"
+    ],
+    "summary": "This project helped me strengthen my end-to-end development workflow, connecting frontend interactivity with backend API management and user authentication securely and cleanly."
+  },
+
+  {
+    "id": 2,
+    "name": "Deal Craft B2B E-commerce (MERN Stack)",
+    "technologies": "React, Tailwind, Express, MongoDb, JWT Token for auth Secure",
+    "image_path": "p2",
+    "description": "Deal Craft is a B2B e-commerce platform that streamlines wholesale buying and selling for businesses. Built with the MERN stack, it allows users to browse products, place bulk orders, and manage their business profiles efficiently. I implemented JWT-based secure authentication to protect user data and order histories, ensuring only authorized users can access and manage orders. Tailwind CSS was used to deliver a clean, responsive UI that adapts seamlessly across devices. ",
+    "challenges": [
+      "Integrating JWT authentication and role-based access control to separate vendor and buyer functionalities securely.",
+      "Designing a dynamic cart and order management system suitable for B2B bulk transactions with flexible quantity handling and pricing logic."
+    ],
+    "summary": "Building Deal Craft taught me how to design a secure, scalable B2B e-commerce application using the MERN stack in a real-world workflow. I learned to implement JWT-based role management, dynamic cart handling for bulk orders, and clean, responsive interfaces with Tailwind while ensuring fast API responses with Express and MongoDB. This project strengthened my ability to connect frontend state with backend logic seamlessly, improved my architectural thinking, and gave me confidence in handling complex user flows in full-stack business applications."
+  },
+  {
+    "id": 3,
+    "name": "Hobby Nest Community (MERN Stact)",
+    "technologies": "React, Tailwind, Express, MongoDb",
+    "image_path": "p3",
+    "description": "Hobbynest Community is a social platform that allows users to create and join hobby-based groups, making it easy for people to connect around shared interests. Built with React, Tailwind CSS, Express, and MongoDB, it offers a mini dashboard for users to manage their groups and includes a dark mode option for a personalized browsing experience.",
+    "challenges": [
+      "Handling group membership logic and activity updates efficiently across the frontend and backend.",
+      "Implementing dark mode with Tailwind while ensuring consistent component theming across all pages."
+    ],
+    "summary": "This project helped me sharpen my skills in building interactive community features, user dashboards, and managing dynamic user interactions within a full-stack MERN environment."
+  },
+  {
+    "id": 4,
+    "name": "DietGhor Health Care (Core PHP)",
+    "technologies": "PHP, MySql, Bootstrap",
+    "image_path": "p4",
+    "description": "Diet Ghor is a healthcare e-commerce platform that sells supplements while providing users with tools to manage their fitness journey. Built using Core PHP, MySQL, and Bootstrap, it includes all essential e-commerce features, allowing users to browse and purchase products seamlessly. From the user dashboard, customers can book appointments with trainers and nutritionists, and use BMI and body nutrition calculators to track their health metrics directly on the platform.",
+    "challenges": [
+      "Designing a full-featured e-commerce workflow in Core PHP, including cart, checkout, and secure user management.",
+      "Implementing BMI and nutrition calculators with real-time input validation and personalized result generation",
+      "Building custom appointment booking functionalities integrated with trainer and nutritionist schedules without third-party dependencies."
+    ],
+    "summary": "This real-life project strengthened my raw PHP development skills, deepened my understanding of e-commerce logic and database structuring in MySQL, and improved my ability to build user-focused health tools within a practical business application."
+  }
+]
