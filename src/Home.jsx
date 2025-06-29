@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 import "./App.css";
 import fLogo from "./assets/fLogo.png";
 import finger from "./assets/finger.png";
@@ -13,6 +12,7 @@ import pc from "./assets/pc.png";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Header from "./Component/Header";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -146,48 +146,14 @@ const Home = () => {
 
   return (
     <div>
-      {/* Navbar */}
-      <nav
-        id="navbar_top"
-        className="navbar navbar-expand-lg navbar-light container fixed-top">
-        <a className="navbar-brand" href="#">
-          <img width={"200px"} src={fLogo} alt="Logo" />
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#work">
-                Work <span className="visually-hidden">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="about.html">
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Resume
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      {/* Navbar */}
+      <Header></Header>
 
       {/* Contact Button */}
       <div>
-        <a className="finger" href="mailto:chowdhuryfaisal66@gmail.com">
+        <a
+          className="finger"
+          target="_blank"
+          href="https://wa.me/8801933482811">
           <img src={finger} alt="Contact" />
         </a>
       </div>
@@ -219,16 +185,16 @@ const Home = () => {
           </div>
           <p id="text-container-mobile">
             <span className="line-1 line">
-              <span className="text assist">Heyo! I'm</span>
-              <span className="text main"> gabe </span>
+              <span className="text assist">Hello! I'm </span>
+              <span className="text main">Faisal </span>
             </span>
             <span className="line-2 line">
-              <span className="text assist">... a multidisciplinary</span>
-              <span className="text main"> designer </span>
+              <span className="text assist">... a dedicated</span>
+              <span className="text main"> developer </span>
             </span>
             <span className="line-3 line">
-              <span className="text assist">& full-time</span>
-              <span className="text main"> jokester </span>
+              <span className="text assist">& problem</span>
+              <span className="text main"> solver </span>
             </span>
           </p>
         </div>
@@ -239,14 +205,12 @@ const Home = () => {
       {/* Hero Section */}
 
       {/* Projects */}
-      <div
-        id="work"
-        style={{ height: "100vh" }}
-        className="project_area snapping">
+      <div id="work" style={{ height: "" }} className="project_area snapping">
         <div className="container">
-          <h2 id="myImg">Projects</h2>
-
-          <section className="section horizontal">
+          <section className="section horizontal ">
+            <h2 id="myImg" className="absolute top-10 left-0 right-0 ">
+              Projects
+            </h2>
             <div className="section__cards">
               {projects.map((project, idx) => (
                 <div key={idx} className="card section__card">

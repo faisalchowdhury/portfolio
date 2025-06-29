@@ -3,9 +3,11 @@ import fLogo from "../../assets/fLogo.png";
 import { Link } from "react-router";
 const Logo = () => {
   return (
-    <div>
-      <img className="w-[220px]" src={fLogo} alt="" />
-    </div>
+    <Link to={"/"}>
+      <div>
+        <img width={"200px"} src={fLogo} alt="" />
+      </div>
+    </Link>
   );
 };
 
